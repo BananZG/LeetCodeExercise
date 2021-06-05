@@ -51,10 +51,7 @@ const openLock = (deadends, target) => {
   return -1;
 };
 
-const test = (func, target, ...input) => {
-  const ret = func(...input);
-  console.log(`Check ${ret} === ${target}, passed: ${ret === target}`);
-};
+const { test } = require('../util');
 
 test(openLock, 6, ["0201", "0101", "0102", "1212", "2002"], "0202");
 test(openLock, 1, ["8888"], "0009");

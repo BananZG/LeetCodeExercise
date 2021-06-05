@@ -25,10 +25,7 @@ const isInterleave = (s1, s2, s3) => {
   return check();
 };
 
-const test = (func, target, ...input) => {
-  const ret = func(...input);
-  console.log(`Check ${ret} === ${target}, passed: ${ret === target}`)
-}
+const { test } = require('../util');
 
 test(isInterleave, true, "aabcc", "dbbca", "aadbbcbcac");
 test(isInterleave, false, "aabcc", "dbbca", "aadbbbaccc");

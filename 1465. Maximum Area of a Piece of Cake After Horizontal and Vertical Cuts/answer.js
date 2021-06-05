@@ -44,10 +44,7 @@ const maxFinder = (cuts, size) =>
 const maxArea = (h, w, horizontalCuts, verticalCuts) =>
   (maxFinder(horizontalCuts, h) * maxFinder(verticalCuts, w)) % (10 ** 9 + 7);
 
-const test = (func, target, ...input) => {
-  const ret = func(...input);
-  console.log(`Check ${ret} === ${target}, passed: ${ret === target}`);
-};
+const { test } = require('../util');
 
 test(maxArea, 4, 5, 4, [1, 2, 4], [1, 3]);
 test(maxArea, 9, 5, 4, [3], [3]);
